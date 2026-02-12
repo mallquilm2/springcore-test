@@ -1,7 +1,9 @@
 package edu.pe.cibertec.beans;
 
-public class HolaMundo {
+import org.springframework.beans.factory.annotation.Value;
 
+public class HolaMundo {
+    @Value("Alumnos backend desde anotaciones Configuración")
     private String nombre;
 
     public void saludar(){
