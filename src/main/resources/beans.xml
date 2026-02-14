@@ -9,4 +9,18 @@
        <property name="nombre" value="Alumnos backend desde XML configuración"/>
    </bean>
 
+    <bean id="documentoExcel" class="edu.pe.cibertec.beans.DocumentoExcel" scope="prototype">
+    </bean>
+
+    <bean id="documentoTexto" class="edu.pe.cibertec.beans.DocumentoTexto" scope="prototype">
+    </bean>
+
+    <bean id="impresoraService" class="edu.pe.cibertec.service.ImpresoraService">
+        <property name="documento" ref="documentoTexto"/>
+    </bean>
+
+    <bean id="impresoraService2" class="edu.pe.cibertec.service.ImpresoraService">
+        <constructor-arg  ref="documentoTexto"/>
+    </bean>
+
 </beans>
