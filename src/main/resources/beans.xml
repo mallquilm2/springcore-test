@@ -9,7 +9,8 @@
        <property name="nombre" value="Alumnos backend desde XML configuración"/>
    </bean>
 
-    <bean id="documentoExcel" class="edu.pe.cibertec.beans.DocumentoExcel" scope="prototype">
+    <bean id="documentoExcel" class="edu.pe.cibertec.beans.DocumentoExcel"
+            init-method="iniciar" destroy-method="destruir">
     </bean>
 
     <bean id="documentoTexto" class="edu.pe.cibertec.beans.DocumentoTexto" scope="prototype">
