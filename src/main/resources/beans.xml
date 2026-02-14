@@ -3,17 +3,17 @@
        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
        xsi:schemaLocation="
        http://www.springframework.org/schema/beans
-       http://www.springframework.org/schema/beans/spring-beans.xsd">
+       http://www.springframework.org/schema/beans/spring-beans.xsd"
+        default-destroy-method="destruir" default-init-method="iniciar">
 
    <bean id="holaMundo" class="edu.pe.cibertec.beans.HolaMundo" scope="prototype">
        <property name="nombre" value="Alumnos backend desde XML configuración"/>
    </bean>
 
-    <bean id="documentoExcel" class="edu.pe.cibertec.beans.DocumentoExcel"
-            init-method="iniciar" destroy-method="destruir">
+    <bean id="documentoExcel" class="edu.pe.cibertec.beans.DocumentoExcel" lazy-init="true">
     </bean>
 
-    <bean id="documentoTexto" class="edu.pe.cibertec.beans.DocumentoTexto" scope="prototype">
+    <bean id="documentoTexto" class="edu.pe.cibertec.beans.DocumentoTexto" lazy-init="true">
     </bean>
 
     <bean id="impresoraService" class="edu.pe.cibertec.service.ImpresoraService">
