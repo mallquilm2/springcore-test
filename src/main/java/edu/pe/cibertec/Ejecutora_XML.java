@@ -25,9 +25,6 @@ public class Ejecutora_XML {
         ImpresoraService impresoraService = (ImpresoraService) contexto.getBean("impresoraService");
         impresoraService.imprimirDocumento();
 
-        ImpresoraService impresoraService = (ImpresoraService) contexto.getBean("impresoraService");
-        impresoraService.imprimirDocumento();
-
         //Cerramos el contexto de spring con la configuración XML
         ((ConfigurableApplicationContext)contexto).close();
     }
